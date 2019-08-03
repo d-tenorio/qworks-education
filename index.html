@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6f8afc07b0f6470b8917109dfaee71ab {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_6f8afc07b0f6470b8917109dfaee71ab" ></div>
+        
+</body>
+<script>    
+    
+            var map_6f8afc07b0f6470b8917109dfaee71ab = L.map(
+                "map_6f8afc07b0f6470b8917109dfaee71ab",
+                {
+                    center: [35.111135, -106.633373],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8dd21a5153d646bc88226f5df429ae4d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var marker_5e02bc5398df43948e3c6e6a34505263 = L.marker(
+                [35.151593, -106.560124],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_d12fc561329b4b2381d6568ab7a7ec6a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5e02bc5398df43948e3c6e6a34505263.setIcon(icon_d12fc561329b4b2381d6568ab7a7ec6a);
+        
+    
+        var popup_a2bbb98c66b44399bc4f23597cf63b27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8f92bc8bacc847aa82e132935deacd1f = $(`<div id="html_8f92bc8bacc847aa82e132935deacd1f" style="width: 100.0%; height: 100.0%;">Albuquerque Academy</div>`)[0];
+            popup_a2bbb98c66b44399bc4f23597cf63b27.setContent(html_8f92bc8bacc847aa82e132935deacd1f);
+        
+
+        marker_5e02bc5398df43948e3c6e6a34505263.bindPopup(popup_a2bbb98c66b44399bc4f23597cf63b27)
+        ;
+
+        
+    
+    
+            var marker_211a8f1d31174c6c91c6b6ddf8a76b16 = L.marker(
+                [35.071256, -106.632741],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_e2824b0aa9784bbb8fb051975845afa8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_211a8f1d31174c6c91c6b6ddf8a76b16.setIcon(icon_e2824b0aa9784bbb8fb051975845afa8);
+        
+    
+        var popup_69cc70ef9dd1481ea182920b543366e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_37385b5a147d4c0e8414c03837616cfc = $(`<div id="html_37385b5a147d4c0e8414c03837616cfc" style="width: 100.0%; height: 100.0%;">Albuquerque Institute for Mathematics and Science</div>`)[0];
+            popup_69cc70ef9dd1481ea182920b543366e4.setContent(html_37385b5a147d4c0e8414c03837616cfc);
+        
+
+        marker_211a8f1d31174c6c91c6b6ddf8a76b16.bindPopup(popup_69cc70ef9dd1481ea182920b543366e4)
+        ;
+
+        
+    
+    
+            var marker_8eb2dc5033c74e2e9843a7757dd40cb7 = L.marker(
+                [35.098487, -106.634781],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_f03660bc91c34a1fa240525e1a3bee1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8eb2dc5033c74e2e9843a7757dd40cb7.setIcon(icon_f03660bc91c34a1fa240525e1a3bee1f);
+        
+    
+        var popup_90e688a64dd44310a2a0b1b1a369ceec = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ad23e02427f4ed08adfd9fa4ed9c8fa = $(`<div id="html_6ad23e02427f4ed08adfd9fa4ed9c8fa" style="width: 100.0%; height: 100.0%;">Albuquerque High School</div>`)[0];
+            popup_90e688a64dd44310a2a0b1b1a369ceec.setContent(html_6ad23e02427f4ed08adfd9fa4ed9c8fa);
+        
+
+        marker_8eb2dc5033c74e2e9843a7757dd40cb7.bindPopup(popup_90e688a64dd44310a2a0b1b1a369ceec)
+        ;
+
+        
+    
+    
+            var marker_ae9b3e401d044d42bb57b9e5e75cb179 = L.marker(
+                [35.10774, -106.700639],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_c9cfb962844242bc964781e57ca0e521 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ae9b3e401d044d42bb57b9e5e75cb179.setIcon(icon_c9cfb962844242bc964781e57ca0e521);
+        
+    
+        var popup_f61a74528dc243aab2efd704eea32598 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b8a9bd5aaa748bab457b52561bd0c07 = $(`<div id="html_8b8a9bd5aaa748bab457b52561bd0c07" style="width: 100.0%; height: 100.0%;">Albuquerque Talent Development Academy</div>`)[0];
+            popup_f61a74528dc243aab2efd704eea32598.setContent(html_8b8a9bd5aaa748bab457b52561bd0c07);
+        
+
+        marker_ae9b3e401d044d42bb57b9e5e75cb179.bindPopup(popup_f61a74528dc243aab2efd704eea32598)
+        ;
+
+        
+    
+    
+            var marker_0c00a05c2d304be6b76fd51d3a555e6a = L.marker(
+                [35.083831, -106.65175],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_681e3ee9adfd4be7a94a527e783ba026 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0c00a05c2d304be6b76fd51d3a555e6a.setIcon(icon_681e3ee9adfd4be7a94a527e783ba026);
+        
+    
+        var popup_c72a86e382654e229e717a700c8d9275 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd9e8598d0674018b3028d07439e5c81 = $(`<div id="html_bd9e8598d0674018b3028d07439e5c81" style="width: 100.0%; height: 100.0%;">Amy Biehl High School</div>`)[0];
+            popup_c72a86e382654e229e717a700c8d9275.setContent(html_bd9e8598d0674018b3028d07439e5c81);
+        
+
+        marker_0c00a05c2d304be6b76fd51d3a555e6a.bindPopup(popup_c72a86e382654e229e717a700c8d9275)
+        ;
+
+        
+    
+    
+            var marker_db63ea5cc39b47688335e8afdf8d9645 = L.marker(
+                [35.084248, -106.649241],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_0b2a6ad71b044a75bc6c0a134201371f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_db63ea5cc39b47688335e8afdf8d9645.setIcon(icon_0b2a6ad71b044a75bc6c0a134201371f);
+        
+    
+        var popup_9f75c73f77574c689c4f6b9e9a62418e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f42108e5328b40e3a58f2b0c696bc628 = $(`<div id="html_f42108e5328b40e3a58f2b0c696bc628" style="width: 100.0%; height: 100.0%;">Atrisco Heritage Academy High School</div>`)[0];
+            popup_9f75c73f77574c689c4f6b9e9a62418e.setContent(html_f42108e5328b40e3a58f2b0c696bc628);
+        
+
+        marker_db63ea5cc39b47688335e8afdf8d9645.bindPopup(popup_9f75c73f77574c689c4f6b9e9a62418e)
+        ;
+
+        
+    
+    
+            var marker_445b72ba4c6c46c795297a76558d167f = L.marker(
+                [35.159598, -106.612123],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_8de6b595dd5545ae90d220b59bc644a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_445b72ba4c6c46c795297a76558d167f.setIcon(icon_8de6b595dd5545ae90d220b59bc644a9);
+        
+    
+        var popup_a490521ea3664de288d472353b930739 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f59d1d828e54a3a8ae519c4e10842e6 = $(`<div id="html_9f59d1d828e54a3a8ae519c4e10842e6" style="width: 100.0%; height: 100.0%;">Bosque School</div>`)[0];
+            popup_a490521ea3664de288d472353b930739.setContent(html_9f59d1d828e54a3a8ae519c4e10842e6);
+        
+
+        marker_445b72ba4c6c46c795297a76558d167f.bindPopup(popup_a490521ea3664de288d472353b930739)
+        ;
+
+        
+    
+    
+            var marker_ce3dcafcc04b401e8ba6e52088b94c62 = L.marker(
+                [35.205813, -106.66181],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_b7c5dd3fe73945eb9558fb0dd1fbd880 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ce3dcafcc04b401e8ba6e52088b94c62.setIcon(icon_b7c5dd3fe73945eb9558fb0dd1fbd880);
+        
+    
+        var popup_435a9e93b3c548b2b1a592e3fb5b708f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_320a121453504e81984999d43edb234f = $(`<div id="html_320a121453504e81984999d43edb234f" style="width: 100.0%; height: 100.0%;">Cibola High School</div>`)[0];
+            popup_435a9e93b3c548b2b1a592e3fb5b708f.setContent(html_320a121453504e81984999d43edb234f);
+        
+
+        marker_ce3dcafcc04b401e8ba6e52088b94c62.bindPopup(popup_435a9e93b3c548b2b1a592e3fb5b708f)
+        ;
+
+        
+    
+    
+            var marker_8a4dcaf53aa3491c91df43c21caabf26 = L.marker(
+                [35.181596, -106.583239],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_c5575ca6f14d40218918afba1fae26f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8a4dcaf53aa3491c91df43c21caabf26.setIcon(icon_c5575ca6f14d40218918afba1fae26f3);
+        
+    
+        var popup_5a44ffb9e9e94996a58238c163fa5043 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f600095162964057b12e406232d1a4b1 = $(`<div id="html_f600095162964057b12e406232d1a4b1" style="width: 100.0%; height: 100.0%;">Corrales International School</div>`)[0];
+            popup_5a44ffb9e9e94996a58238c163fa5043.setContent(html_f600095162964057b12e406232d1a4b1);
+        
+
+        marker_8a4dcaf53aa3491c91df43c21caabf26.bindPopup(popup_5a44ffb9e9e94996a58238c163fa5043)
+        ;
+
+        
+    
+    
+            var marker_14e29e18692849ada2623f429a0e9c25 = L.marker(
+                [35.111135, -106.633373],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_e0e11f37be934cdd8bd7dab6878dd977 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_14e29e18692849ada2623f429a0e9c25.setIcon(icon_e0e11f37be934cdd8bd7dab6878dd977);
+        
+    
+        var popup_51cb707494cb4ce78b4bf17f6eae094e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c059f98f682b4043973b9a4019b1afb4 = $(`<div id="html_c059f98f682b4043973b9a4019b1afb4" style="width: 100.0%; height: 100.0%;">Digital Arts & Technology Academy</div>`)[0];
+            popup_51cb707494cb4ce78b4bf17f6eae094e.setContent(html_c059f98f682b4043973b9a4019b1afb4);
+        
+
+        marker_14e29e18692849ada2623f429a0e9c25.bindPopup(popup_51cb707494cb4ce78b4bf17f6eae094e)
+        ;
+
+        
+    
+    
+            var marker_336eabbd2abe42e798f72d44cfb1a41d = L.marker(
+                [35.131007, -106.583808],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_778e063d7919438a990148ef82b8fb43 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_336eabbd2abe42e798f72d44cfb1a41d.setIcon(icon_778e063d7919438a990148ef82b8fb43);
+        
+    
+        var popup_4e3245e73c7f4de88a4bfe09d8747640 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59b1632d0ae343cbbae93bb4f73b027b = $(`<div id="html_59b1632d0ae343cbbae93bb4f73b027b" style="width: 100.0%; height: 100.0%;">Del Norte High School</div>`)[0];
+            popup_4e3245e73c7f4de88a4bfe09d8747640.setContent(html_59b1632d0ae343cbbae93bb4f73b027b);
+        
+
+        marker_336eabbd2abe42e798f72d44cfb1a41d.bindPopup(popup_4e3245e73c7f4de88a4bfe09d8747640)
+        ;
+
+        
+    
+    
+            var marker_765282bf7a064c789c4f8a636ff7b4a9 = L.marker(
+                [35.022279, -106.682024],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_1cca90036e23495daf468a67495e7f33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_765282bf7a064c789c4f8a636ff7b4a9.setIcon(icon_1cca90036e23495daf468a67495e7f33);
+        
+    
+        var popup_87d9eefe1b7141cea0118ca39739292b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a78f3a46a6d9423eb94b4c910ab8cb79 = $(`<div id="html_a78f3a46a6d9423eb94b4c910ab8cb79" style="width: 100.0%; height: 100.0%;">El Camino Real Academy</div>`)[0];
+            popup_87d9eefe1b7141cea0118ca39739292b.setContent(html_a78f3a46a6d9423eb94b4c910ab8cb79);
+        
+
+        marker_765282bf7a064c789c4f8a636ff7b4a9.bindPopup(popup_87d9eefe1b7141cea0118ca39739292b)
+        ;
+
+        
+    
+    
+            var marker_fe08784cb8f54d6aa4d9d9be009b93ef = L.marker(
+                [35.130605, -106.513328],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_9c7e1c6968bf4c3a8d9e7039c2032693 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fe08784cb8f54d6aa4d9d9be009b93ef.setIcon(icon_9c7e1c6968bf4c3a8d9e7039c2032693);
+        
+    
+        var popup_beca732a090b4993a7fb2dc86b0229d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed07438032c64affb7dce30f3907e1b9 = $(`<div id="html_ed07438032c64affb7dce30f3907e1b9" style="width: 100.0%; height: 100.0%;">Eldorado High School</div>`)[0];
+            popup_beca732a090b4993a7fb2dc86b0229d7.setContent(html_ed07438032c64affb7dce30f3907e1b9);
+        
+
+        marker_fe08784cb8f54d6aa4d9d9be009b93ef.bindPopup(popup_beca732a090b4993a7fb2dc86b0229d7)
+        ;
+
+        
+    
+    
+            var marker_e7830b2186a348a390ae366e7ee9a63c = L.marker(
+                [35.075663, -106.591503],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_d9d024be7cec434cafe6b6f6005bda74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e7830b2186a348a390ae366e7ee9a63c.setIcon(icon_d9d024be7cec434cafe6b6f6005bda74);
+        
+    
+        var popup_12e267407db048ab842f3e5d687e61dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d69fef04f9c4144825b198ae52443ef = $(`<div id="html_8d69fef04f9c4144825b198ae52443ef" style="width: 100.0%; height: 100.0%;">Highland High School</div>`)[0];
+            popup_12e267407db048ab842f3e5d687e61dc.setContent(html_8d69fef04f9c4144825b198ae52443ef);
+        
+
+        marker_e7830b2186a348a390ae366e7ee9a63c.bindPopup(popup_12e267407db048ab842f3e5d687e61dc)
+        ;
+
+        
+    
+    
+            var marker_613c9e8099284ab3a2cec1376c549a9a = L.marker(
+                [35.173586, -106.568889],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_f6cc16ebc5314454b0ad7ab98f3b1270 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_613c9e8099284ab3a2cec1376c549a9a.setIcon(icon_f6cc16ebc5314454b0ad7ab98f3b1270);
+        
+    
+        var popup_29b4deb543034eb6b7cf626ad0223fe7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82e3cf04fb994b8ab4176f0340b99c2d = $(`<div id="html_82e3cf04fb994b8ab4176f0340b99c2d" style="width: 100.0%; height: 100.0%;">Hope Christian School</div>`)[0];
+            popup_29b4deb543034eb6b7cf626ad0223fe7.setContent(html_82e3cf04fb994b8ab4176f0340b99c2d);
+        
+
+        marker_613c9e8099284ab3a2cec1376c549a9a.bindPopup(popup_29b4deb543034eb6b7cf626ad0223fe7)
+        ;
+
+        
+    
+    
+            var marker_a757da2d139d49df8cd3b99692105c60 = L.marker(
+                [35.058236, -106.704662],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_83049d9466264b659568238db89ac9de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a757da2d139d49df8cd3b99692105c60.setIcon(icon_83049d9466264b659568238db89ac9de);
+        
+    
+        var popup_44fd798a48514a5a9a3f2d6441ec5f3b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3df086d916e949a4a553e03231787cdb = $(`<div id="html_3df086d916e949a4a553e03231787cdb" style="width: 100.0%; height: 100.0%;">La Academia de Esperanza Charter School</div>`)[0];
+            popup_44fd798a48514a5a9a3f2d6441ec5f3b.setContent(html_3df086d916e949a4a553e03231787cdb);
+        
+
+        marker_a757da2d139d49df8cd3b99692105c60.bindPopup(popup_44fd798a48514a5a9a3f2d6441ec5f3b)
+        ;
+
+        
+    
+    
+            var marker_24e63768f10049e8ba335063308710a1 = L.marker(
+                [35.181509, -106.556488],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_5a6d1a4b68ba402f9db5ae087e02d531 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_24e63768f10049e8ba335063308710a1.setIcon(icon_5a6d1a4b68ba402f9db5ae087e02d531);
+        
+    
+        var popup_59b8714287b340b58bffdda8e5de5855 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b9fdfb59b4441f4bb9313835665b3fa = $(`<div id="html_3b9fdfb59b4441f4bb9313835665b3fa" style="width: 100.0%; height: 100.0%;">La Cueva High School</div>`)[0];
+            popup_59b8714287b340b58bffdda8e5de5855.setContent(html_3b9fdfb59b4441f4bb9313835665b3fa);
+        
+
+        marker_24e63768f10049e8ba335063308710a1.bindPopup(popup_59b8714287b340b58bffdda8e5de5855)
+        ;
+
+        
+    
+    
+            var marker_6dca007144ac4de1a465c9f8f803f9e8 = L.marker(
+                [35.124362, -106.64399],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_e04fee6c56eb4043a27f2a5e0e5890b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6dca007144ac4de1a465c9f8f803f9e8.setIcon(icon_e04fee6c56eb4043a27f2a5e0e5890b1);
+        
+    
+        var popup_63de58d5be2b417388d617b3585798d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f68a067ecc8f496681428f33d10cbcf0 = $(`<div id="html_f68a067ecc8f496681428f33d10cbcf0" style="width: 100.0%; height: 100.0%;">Los Puentes High School</div>`)[0];
+            popup_63de58d5be2b417388d617b3585798d0.setContent(html_f68a067ecc8f496681428f33d10cbcf0);
+        
+
+        marker_6dca007144ac4de1a465c9f8f803f9e8.bindPopup(popup_63de58d5be2b417388d617b3585798d0)
+        ;
+
+        
+    
+    
+            var marker_9a92307ca53c45579432a5b146aa4a58 = L.marker(
+                [35.078773, -106.594713],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_d124fc1eff914d96afd4f2641cd2c8b9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9a92307ca53c45579432a5b146aa4a58.setIcon(icon_d124fc1eff914d96afd4f2641cd2c8b9);
+        
+    
+        var popup_1dab8b41e44f4ffba62d88d5488e7ad8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d5cb66aa88f4dac82c2446169a5a2cb = $(`<div id="html_3d5cb66aa88f4dac82c2446169a5a2cb" style="width: 100.0%; height: 100.0%;">Media Arts Collaborative Charter School</div>`)[0];
+            popup_1dab8b41e44f4ffba62d88d5488e7ad8.setContent(html_3d5cb66aa88f4dac82c2446169a5a2cb);
+        
+
+        marker_9a92307ca53c45579432a5b146aa4a58.bindPopup(popup_1dab8b41e44f4ffba62d88d5488e7ad8)
+        ;
+
+        
+    
+    
+            var marker_1270103863f8481a8f0a877d2af89b68 = L.marker(
+                [35.086554, -106.511085],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_1e39a201571f41feb581e05aa8a5ec47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1270103863f8481a8f0a877d2af89b68.setIcon(icon_1e39a201571f41feb581e05aa8a5ec47);
+        
+    
+        var popup_a224833446af429287a0bae940c3bcdc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d44d7d6e83014b30a9df8ad41033a56c = $(`<div id="html_d44d7d6e83014b30a9df8ad41033a56c" style="width: 100.0%; height: 100.0%;">Manzano High School</div>`)[0];
+            popup_a224833446af429287a0bae940c3bcdc.setContent(html_d44d7d6e83014b30a9df8ad41033a56c);
+        
+
+        marker_1270103863f8481a8f0a877d2af89b68.bindPopup(popup_a224833446af429287a0bae940c3bcdc)
+        ;
+
+        
+    
+    
+            var marker_072511f0d34144829f69d9c496f27928 = L.marker(
+                [35.109936, -106.637559],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_b239de82cf5d4785a769917f639316af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_072511f0d34144829f69d9c496f27928.setIcon(icon_b239de82cf5d4785a769917f639316af);
+        
+    
+        var popup_d5b26fb9d55741da8284df18fd507a7b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52e7b9f2c6fb4043abd36afe102bbe93 = $(`<div id="html_52e7b9f2c6fb4043abd36afe102bbe93" style="width: 100.0%; height: 100.0%;">Menaul School</div>`)[0];
+            popup_d5b26fb9d55741da8284df18fd507a7b.setContent(html_52e7b9f2c6fb4043abd36afe102bbe93);
+        
+
+        marker_072511f0d34144829f69d9c496f27928.bindPopup(popup_d5b26fb9d55741da8284df18fd507a7b)
+        ;
+
+        
+    
+    
+            var marker_65013da7d8c04153b81feb3a659fbd43 = L.marker(
+                [35.107656, -106.655575],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_494b126d08df46d7a9eabae0805a17ff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_65013da7d8c04153b81feb3a659fbd43.setIcon(icon_494b126d08df46d7a9eabae0805a17ff);
+        
+    
+        var popup_e05c3114dbdf45c591d377c54c641efd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4751a1f501484eb18d3f50c5cd9ef7f5 = $(`<div id="html_4751a1f501484eb18d3f50c5cd9ef7f5" style="width: 100.0%; height: 100.0%;">Native American Community Academy</div>`)[0];
+            popup_e05c3114dbdf45c591d377c54c641efd.setContent(html_4751a1f501484eb18d3f50c5cd9ef7f5);
+        
+
+        marker_65013da7d8c04153b81feb3a659fbd43.bindPopup(popup_e05c3114dbdf45c591d377c54c641efd)
+        ;
+
+        
+    
+    
+            var marker_67ed9445b8034e89a3dbaf09e17586b8 = L.marker(
+                [35.130966, -106.581195],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_c5250130f02048f0aafc2e0fff694fa8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_67ed9445b8034e89a3dbaf09e17586b8.setIcon(icon_c5250130f02048f0aafc2e0fff694fa8);
+        
+    
+        var popup_34a41504e2e64e61ac8e543b05ce4958 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_148e538d1283499abd4bf75fb8cb40f1 = $(`<div id="html_148e538d1283499abd4bf75fb8cb40f1" style="width: 100.0%; height: 100.0%;">Nex+Gen Academy</div>`)[0];
+            popup_34a41504e2e64e61ac8e543b05ce4958.setContent(html_148e538d1283499abd4bf75fb8cb40f1);
+        
+
+        marker_67ed9445b8034e89a3dbaf09e17586b8.bindPopup(popup_34a41504e2e64e61ac8e543b05ce4958)
+        ;
+
+        
+    
+    
+            var marker_b082444ba8844896af7d9ac174ac40d5 = L.marker(
+                [35.073492, -106.711025],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_6930beb4046444fda28ccce050602f48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b082444ba8844896af7d9ac174ac40d5.setIcon(icon_6930beb4046444fda28ccce050602f48);
+        
+    
+        var popup_e521f28a0a384a7686a63807eb7486bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_be4f349c955342ac955dacd5a5906837 = $(`<div id="html_be4f349c955342ac955dacd5a5906837" style="width: 100.0%; height: 100.0%;">Mark Armijo Academy</div>`)[0];
+            popup_e521f28a0a384a7686a63807eb7486bd.setContent(html_be4f349c955342ac955dacd5a5906837);
+        
+
+        marker_b082444ba8844896af7d9ac174ac40d5.bindPopup(popup_e521f28a0a384a7686a63807eb7486bd)
+        ;
+
+        
+    
+    
+            var marker_c02a7ec5047442b8bacd4dd4edbfa2a4 = L.marker(
+                [35.096895, -106.517802],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_3befc52748d54c328079f1918d8a3da4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c02a7ec5047442b8bacd4dd4edbfa2a4.setIcon(icon_3befc52748d54c328079f1918d8a3da4);
+        
+    
+        var popup_62e2ed6635a24f17a8e0e9c134b3ca39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f60d439782649309234609c620c9878 = $(`<div id="html_9f60d439782649309234609c620c9878" style="width: 100.0%; height: 100.0%;">Public Academy for Performing Arts</div>`)[0];
+            popup_62e2ed6635a24f17a8e0e9c134b3ca39.setContent(html_9f60d439782649309234609c620c9878);
+        
+
+        marker_c02a7ec5047442b8bacd4dd4edbfa2a4.bindPopup(popup_62e2ed6635a24f17a8e0e9c134b3ca39)
+        ;
+
+        
+    
+    
+            var marker_0b5dc425fb354408a4db3356384c8fde = L.marker(
+                [35.050885, -106.695658],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_c6005d81c00142529a315ebe547661b4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0b5dc425fb354408a4db3356384c8fde.setIcon(icon_c6005d81c00142529a315ebe547661b4);
+        
+    
+        var popup_631e785b73cd41489a1d8fc23f8cd2b5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5a66810e0e944ac996034d446367af5 = $(`<div id="html_b5a66810e0e944ac996034d446367af5" style="width: 100.0%; height: 100.0%;">Rio Grande High School</div>`)[0];
+            popup_631e785b73cd41489a1d8fc23f8cd2b5.setContent(html_b5a66810e0e944ac996034d446367af5);
+        
+
+        marker_0b5dc425fb354408a4db3356384c8fde.bindPopup(popup_631e785b73cd41489a1d8fc23f8cd2b5)
+        ;
+
+        
+    
+    
+            var marker_713aff077a3d44d19bdfd16f7dcb570a = L.marker(
+                [35.037934, -106.722895],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_396684de71cf44c3ae38797ab49f4513 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_713aff077a3d44d19bdfd16f7dcb570a.setIcon(icon_396684de71cf44c3ae38797ab49f4513);
+        
+    
+        var popup_6bc324236a8b4e9b9fb2dd9f75f54f9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f2c0f747fcdc405d87954fa76a731912 = $(`<div id="html_f2c0f747fcdc405d87954fa76a731912" style="width: 100.0%; height: 100.0%;">Robert F. Kennedy High School</div>`)[0];
+            popup_6bc324236a8b4e9b9fb2dd9f75f54f9a.setContent(html_f2c0f747fcdc405d87954fa76a731912);
+        
+
+        marker_713aff077a3d44d19bdfd16f7dcb570a.bindPopup(popup_6bc324236a8b4e9b9fb2dd9f75f54f9a)
+        ;
+
+        
+    
+    
+            var marker_d09df3ab8a1b42e495732082dae47ae9 = L.marker(
+                [35.127992, -106.700369],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_d01bd7969ee948e9b10a0849123951a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d09df3ab8a1b42e495732082dae47ae9.setIcon(icon_d01bd7969ee948e9b10a0849123951a9);
+        
+    
+        var popup_795acb1f40434aca90a634b836966498 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_303cac82fdba46f392124b60003b4dd2 = $(`<div id="html_303cac82fdba46f392124b60003b4dd2" style="width: 100.0%; height: 100.0%;">St. Pius X High School</div>`)[0];
+            popup_795acb1f40434aca90a634b836966498.setContent(html_303cac82fdba46f392124b60003b4dd2);
+        
+
+        marker_d09df3ab8a1b42e495732082dae47ae9.bindPopup(popup_795acb1f40434aca90a634b836966498)
+        ;
+
+        
+    
+    
+            var marker_36052a82c2a645c59d2c78b7b56d61b2 = L.marker(
+                [35.11648, -106.556657],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_2d7337917e4746f6a5cb83384c862111 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_36052a82c2a645c59d2c78b7b56d61b2.setIcon(icon_2d7337917e4746f6a5cb83384c862111);
+        
+    
+        var popup_2d2c34a26436436e8290162d184ab573 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58cdfd8e32f54b5b99f556bee5262154 = $(`<div id="html_58cdfd8e32f54b5b99f556bee5262154" style="width: 100.0%; height: 100.0%;">Sandia High School</div>`)[0];
+            popup_2d2c34a26436436e8290162d184ab573.setContent(html_58cdfd8e32f54b5b99f556bee5262154);
+        
+
+        marker_36052a82c2a645c59d2c78b7b56d61b2.bindPopup(popup_2d2c34a26436436e8290162d184ab573)
+        ;
+
+        
+    
+    
+            var marker_fa7dec2935ef4804ae62acf0e9125bc3 = L.marker(
+                [35.150821, -106.61825],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_75cdc75a2a4b416399f76c7e7402b149 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fa7dec2935ef4804ae62acf0e9125bc3.setIcon(icon_75cdc75a2a4b416399f76c7e7402b149);
+        
+    
+        var popup_1e967f1d9c10484ab1e799560c0af1e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dc86e63ea9434cf0919fbf5182b1d0f3 = $(`<div id="html_dc86e63ea9434cf0919fbf5182b1d0f3" style="width: 100.0%; height: 100.0%;">Sandia Preparatory School</div>`)[0];
+            popup_1e967f1d9c10484ab1e799560c0af1e9.setContent(html_dc86e63ea9434cf0919fbf5182b1d0f3);
+        
+
+        marker_fa7dec2935ef4804ae62acf0e9125bc3.bindPopup(popup_1e967f1d9c10484ab1e799560c0af1e9)
+        ;
+
+        
+    
+    
+            var marker_352214e6f5824ea6b1154d0444f71b92 = L.marker(
+                [35.036221, -106.709605],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_6fd4e34a3e184b8ba470136f0ef98ba5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_352214e6f5824ea6b1154d0444f71b92.setIcon(icon_6fd4e34a3e184b8ba470136f0ef98ba5);
+        
+    
+        var popup_41b084feed234045aa3db5c4407d3004 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6f3ef55676f04d9493e3eb865c071f34 = $(`<div id="html_6f3ef55676f04d9493e3eb865c071f34" style="width: 100.0%; height: 100.0%;">South Valley Academy</div>`)[0];
+            popup_41b084feed234045aa3db5c4407d3004.setContent(html_6f3ef55676f04d9493e3eb865c071f34);
+        
+
+        marker_352214e6f5824ea6b1154d0444f71b92.bindPopup(popup_41b084feed234045aa3db5c4407d3004)
+        ;
+
+        
+    
+    
+            var marker_9371ca8f01a04533a400eb939564f537 = L.marker(
+                [35.055382, -106.529489],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_0f3ac863c2de4b6ca515c58ba9bd15df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9371ca8f01a04533a400eb939564f537.setIcon(icon_0f3ac863c2de4b6ca515c58ba9bd15df);
+        
+    
+        var popup_e7fae12f69144c02befb25d6f4db9bd9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73d2f353ac294d97aac5174217f35648 = $(`<div id="html_73d2f353ac294d97aac5174217f35648" style="width: 100.0%; height: 100.0%;">Technology Leadership High School</div>`)[0];
+            popup_e7fae12f69144c02befb25d6f4db9bd9.setContent(html_73d2f353ac294d97aac5174217f35648);
+        
+
+        marker_9371ca8f01a04533a400eb939564f537.bindPopup(popup_e7fae12f69144c02befb25d6f4db9bd9)
+        ;
+
+        
+    
+    
+            var marker_69c87b6ea360485eb7d733ea95a045f5 = L.marker(
+                [35.123561, -106.661458],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_e6a09082ba054716bf98b3ac8159d024 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_69c87b6ea360485eb7d733ea95a045f5.setIcon(icon_e6a09082ba054716bf98b3ac8159d024);
+        
+    
+        var popup_d006223b789d4b74a7bc34b58bc5b72a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7fcf1e6745a3468796fad8e9a60b188d = $(`<div id="html_7fcf1e6745a3468796fad8e9a60b188d" style="width: 100.0%; height: 100.0%;">Valley High School</div>`)[0];
+            popup_d006223b789d4b74a7bc34b58bc5b72a.setContent(html_7fcf1e6745a3468796fad8e9a60b188d);
+        
+
+        marker_69c87b6ea360485eb7d733ea95a045f5.bindPopup(popup_d006223b789d4b74a7bc34b58bc5b72a)
+        ;
+
+        
+    
+    
+            var marker_12780782368244b48078ebbfe4c3294d = L.marker(
+                [35.175876, -106.734264],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_bd870447bef94955ac932e181f810154 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_12780782368244b48078ebbfe4c3294d.setIcon(icon_bd870447bef94955ac932e181f810154);
+        
+    
+        var popup_0b37d0d2c2884da4ac0d217861171c16 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ee46adc82ae4254bb5708b28f69dba6 = $(`<div id="html_3ee46adc82ae4254bb5708b28f69dba6" style="width: 100.0%; height: 100.0%;">Volcano Vista High School</div>`)[0];
+            popup_0b37d0d2c2884da4ac0d217861171c16.setContent(html_3ee46adc82ae4254bb5708b28f69dba6);
+        
+
+        marker_12780782368244b48078ebbfe4c3294d.bindPopup(popup_0b37d0d2c2884da4ac0d217861171c16)
+        ;
+
+        
+    
+    
+            var marker_306fc2582ec44035bd648447e7bbc7f2 = L.marker(
+                [35.094382, -106.713959],
+                {}
+            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+        
+    
+            var icon_eaf072fa39c9426fa04d0108f0832191 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_306fc2582ec44035bd648447e7bbc7f2.setIcon(icon_eaf072fa39c9426fa04d0108f0832191);
+        
+    
+        var popup_86f7444b9e8043b1a6e297d0b31af512 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa798dff7bea42aea1673bb60489d494 = $(`<div id="html_aa798dff7bea42aea1673bb60489d494" style="width: 100.0%; height: 100.0%;">West Mesa High School</div>`)[0];
+            popup_86f7444b9e8043b1a6e297d0b31af512.setContent(html_aa798dff7bea42aea1673bb60489d494);
+        
+
+        marker_306fc2582ec44035bd648447e7bbc7f2.bindPopup(popup_86f7444b9e8043b1a6e297d0b31af512)
+        ;
+
+        
+    
+</script>
