@@ -95,7 +95,7 @@ def makeMap(df):
     highlight=True
     ).add_to(m)
     
-    #folium.TileLayer(tiles='Stamen Terrain',name="Terrain").add_to(m)
+    folium.TileLayer(tiles='Stamen Terrain',name="Terrain").add_to(m)
     folium.LayerControl().add_to(m)
     
     #save the map to an html file
