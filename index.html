@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_6f8afc07b0f6470b8917109dfaee71ab {
+                #map_61bc564e604e49d2a45cca61f9a7fcf9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,17 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_6f8afc07b0f6470b8917109dfaee71ab" ></div>
+            <div class="folium-map" id="map_61bc564e604e49d2a45cca61f9a7fcf9" ></div>
         
 </body>
 <script>    
     
-            var map_6f8afc07b0f6470b8917109dfaee71ab = L.map(
-                "map_6f8afc07b0f6470b8917109dfaee71ab",
+            var map_61bc564e604e49d2a45cca61f9a7fcf9 = L.map(
+                "map_61bc564e604e49d2a45cca61f9a7fcf9",
                 {
                     center: [35.111135, -106.633373],
                     crs: L.CRS.EPSG3857,
@@ -55,884 +56,110 @@
 
         
     
-            var tile_layer_8dd21a5153d646bc88226f5df429ae4d = L.tileLayer(
+            var tile_layer_4befff89304d4a4ca6e4f7f9860eebe4 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+            ).addTo(map_61bc564e604e49d2a45cca61f9a7fcf9);
         
     
-            var marker_5e02bc5398df43948e3c6e6a34505263 = L.marker(
-                [35.151593, -106.560124],
+            var choropleth_db251fff90c3400bb86ff1897726e8fe = L.featureGroup(
                 {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
+            ).addTo(map_61bc564e604e49d2a45cca61f9a7fcf9);
+        
+    
+        function geo_json_045ba8eb0a7d4050a227f13b83616f43_styler(feature) {
+            switch(feature.properties.id) {
+                case "Bosque School": case "Cibola High School": case "Corrales International School": case "Digital Arts \u0026 Technology Academy": case "Del Norte High School": case "El Camino Real Academy": 
+                    return {"color": "black", "fillColor": "#d9f0a3", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+                case "Eldorado High School": case "Highland High School": case "Hope Christian School": case "La Academia de Esperanza Charter School": case "La Cueva High School": 
+                    return {"color": "black", "fillColor": "#addd8e", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+                case "Los Puentes High School": case "Media Arts Collaborative Charter School": case "Manzano High School": case "Menaul School": case "Native American Community Academy": case "Nex+Gen Academy": 
+                    return {"color": "black", "fillColor": "#78c679", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+                case "Mark Armijo Academy": case "Public Academy for Performing Arts": case "Rio Grande High School": case "Robert F. Kennedy High School": case "St. Pius X High School": case "Sandia High School": 
+                    return {"color": "black", "fillColor": "#31a354", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+                case "Sandia Preparatory School": case "South Valley Academy": case "Technology Leadership High School": case "Valley High School": case "Volcano Vista High School": case "West Mesa High School": 
+                    return {"color": "black", "fillColor": "#006837", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "#ffffcc", "fillOpacity": 0.7, "opacity": 0.9, "weight": 1};
+            }
+        }
+        function geo_json_045ba8eb0a7d4050a227f13b83616f43_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_61bc564e604e49d2a45cca61f9a7fcf9.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_045ba8eb0a7d4050a227f13b83616f43 = L.geoJson(null, {
+                onEachFeature: geo_json_045ba8eb0a7d4050a227f13b83616f43_onEachFeature,
+            
+                style: geo_json_045ba8eb0a7d4050a227f13b83616f43_styler,
+        }).addTo(choropleth_db251fff90c3400bb86ff1897726e8fe);
+            geo_json_045ba8eb0a7d4050a227f13b83616f43.addData({"features": [{"geometry": {"coordinates": [[[38.151593, -106.560124], [32.151593, -106.560124], [35.151593, -103.560124], [35.151593, -109.560124]]], "type": "Polygon"}, "properties": {"id": "Albuquerque Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.071256, -106.632741], [32.071256, -106.632741], [35.071256, -103.632741], [35.071256, -109.632741]]], "type": "Polygon"}, "properties": {"id": "Albuquerque Institute for Mathematics and Science"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.098487, -106.634781], [32.098487, -106.634781], [35.098487, -103.634781], [35.098487, -109.634781]]], "type": "Polygon"}, "properties": {"id": "Albuquerque High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.10774, -106.700639], [32.10774, -106.700639], [35.10774, -103.700639], [35.10774, -109.700639]]], "type": "Polygon"}, "properties": {"id": "Albuquerque Talent Development Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.083831, -106.65175], [32.083831, -106.65175], [35.083831, -103.65175], [35.083831, -109.65175]]], "type": "Polygon"}, "properties": {"id": "Amy Biehl High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.024535, -106.749961], [32.024535, -106.749961], [35.024535, -103.749961], [35.024535, -109.749961]]], "type": "Polygon"}, "properties": {"id": "Atrisco Heritage Academy High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.159598, -106.612123], [32.159598, -106.612123], [35.159598, -103.612123], [35.159598, -109.612123]]], "type": "Polygon"}, "properties": {"id": "Bosque School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.205813, -106.66181], [32.205813, -106.66181], [35.205813, -103.66181], [35.205813, -109.66181]]], "type": "Polygon"}, "properties": {"id": "Cibola High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.181596, -106.583239], [32.181596, -106.583239], [35.181596, -103.583239], [35.181596, -109.583239]]], "type": "Polygon"}, "properties": {"id": "Corrales International School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.111135, -106.633373], [32.111135, -106.633373], [35.111135, -103.633373], [35.111135, -109.633373]]], "type": "Polygon"}, "properties": {"id": "Digital Arts \u0026 Technology Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.131007, -106.583808], [32.131007, -106.583808], [35.131007, -103.583808], [35.131007, -109.583808]]], "type": "Polygon"}, "properties": {"id": "Del Norte High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.022279, -106.682024], [32.022279, -106.682024], [35.022279, -103.682024], [35.022279, -109.682024]]], "type": "Polygon"}, "properties": {"id": "El Camino Real Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.130605, -106.513328], [32.130605, -106.513328], [35.130605, -103.513328], [35.130605, -109.513328]]], "type": "Polygon"}, "properties": {"id": "Eldorado High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.075663, -106.591503], [32.075663, -106.591503], [35.075663, -103.591503], [35.075663, -109.591503]]], "type": "Polygon"}, "properties": {"id": "Highland High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.173586, -106.568889], [32.173586, -106.568889], [35.173586, -103.568889], [35.173586, -109.568889]]], "type": "Polygon"}, "properties": {"id": "Hope Christian School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.058236, -106.704662], [32.058236, -106.704662], [35.058236, -103.704662], [35.058236, -109.704662]]], "type": "Polygon"}, "properties": {"id": "La Academia de Esperanza Charter School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.181509, -106.556488], [32.181509, -106.556488], [35.181509, -103.556488], [35.181509, -109.556488]]], "type": "Polygon"}, "properties": {"id": "La Cueva High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.124362, -106.64399], [32.124362, -106.64399], [35.124362, -103.64399], [35.124362, -109.64399]]], "type": "Polygon"}, "properties": {"id": "Los Puentes High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.078773, -106.594713], [32.078773, -106.594713], [35.078773, -103.594713], [35.078773, -109.594713]]], "type": "Polygon"}, "properties": {"id": "Media Arts Collaborative Charter School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.086554, -106.511085], [32.086554, -106.511085], [35.086554, -103.511085], [35.086554, -109.511085]]], "type": "Polygon"}, "properties": {"id": "Manzano High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.109936, -106.637559], [32.109936, -106.637559], [35.109936, -103.637559], [35.109936, -109.637559]]], "type": "Polygon"}, "properties": {"id": "Menaul School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.107656, -106.655575], [32.107656, -106.655575], [35.107656, -103.655575], [35.107656, -109.655575]]], "type": "Polygon"}, "properties": {"id": "Native American Community Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.130966, -106.581195], [32.130966, -106.581195], [35.130966, -103.581195], [35.130966, -109.581195]]], "type": "Polygon"}, "properties": {"id": "Nex+Gen Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.073492, -106.711025], [32.073492, -106.711025], [35.073492, -103.711025], [35.073492, -109.711025]]], "type": "Polygon"}, "properties": {"id": "Mark Armijo Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.096895, -106.517802], [32.096895, -106.517802], [35.096895, -103.517802], [35.096895, -109.517802]]], "type": "Polygon"}, "properties": {"id": "Public Academy for Performing Arts"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.050885, -106.695658], [32.050885, -106.695658], [35.050885, -103.695658], [35.050885, -109.695658]]], "type": "Polygon"}, "properties": {"id": "Rio Grande High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.037934, -106.722895], [32.037934, -106.722895], [35.037934, -103.722895], [35.037934, -109.722895]]], "type": "Polygon"}, "properties": {"id": "Robert F. Kennedy High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.127992, -106.700369], [32.127992, -106.700369], [35.127992, -103.700369], [35.127992, -109.700369]]], "type": "Polygon"}, "properties": {"id": "St. Pius X High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.11648, -106.556657], [32.11648, -106.556657], [35.11648, -103.556657], [35.11648, -109.556657]]], "type": "Polygon"}, "properties": {"id": "Sandia High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.150821, -106.61825], [32.150821, -106.61825], [35.150821, -103.61825], [35.150821, -109.61825]]], "type": "Polygon"}, "properties": {"id": "Sandia Preparatory School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.036221, -106.709605], [32.036221, -106.709605], [35.036221, -103.709605], [35.036221, -109.709605]]], "type": "Polygon"}, "properties": {"id": "South Valley Academy"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.055382, -106.529489], [32.055382, -106.529489], [35.055382, -103.529489], [35.055382, -109.529489]]], "type": "Polygon"}, "properties": {"id": "Technology Leadership High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.123561, -106.661458], [32.123561, -106.661458], [35.123561, -103.661458], [35.123561, -109.661458]]], "type": "Polygon"}, "properties": {"id": "Valley High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.175876, -106.734264], [32.175876, -106.734264], [35.175876, -103.734264], [35.175876, -109.734264]]], "type": "Polygon"}, "properties": {"id": "Volcano Vista High School"}, "type": "Feature"}, {"geometry": {"coordinates": [[[38.094382, -106.713959], [32.094382, -106.713959], [35.094382, -103.713959], [35.094382, -109.713959]]], "type": "Polygon"}, "properties": {"id": "West Mesa High School"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+    var color_map_bfb343c2dd4d47ed9264ff0454a592d0 = {};
+
+    
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.color = d3.scale.threshold()
+              .domain([0.0, 0.06813627254509018, 0.13627254509018036, 0.20440881763527055, 0.2725450901803607, 0.3406813627254509, 0.4088176352705411, 0.47695390781563124, 0.5450901803607214, 0.6132264529058116, 0.6813627254509018, 0.749498997995992, 0.8176352705410822, 0.8857715430861723, 0.9539078156312625, 1.0220440881763526, 1.0901803607214429, 1.1583166332665331, 1.2264529058116231, 1.2945891783567134, 1.3627254509018036, 1.4308617234468939, 1.498997995991984, 1.5671342685370742, 1.6352705410821644, 1.7034068136272544, 1.7715430861723447, 1.839679358717435, 1.907815631262525, 1.9759519038076152, 2.0440881763527052, 2.1122244488977957, 2.1803607214428857, 2.2484969939879758, 2.3166332665330662, 2.3847695390781563, 2.4529058116232463, 2.5210420841683367, 2.5891783567134268, 2.6573146292585172, 2.7254509018036073, 2.7935871743486973, 2.8617234468937878, 2.929859719438878, 2.997995991983968, 3.0661322645290583, 3.1342685370741483, 3.2024048096192383, 3.270541082164329, 3.338677354709419, 3.406813627254509, 3.4749498997995993, 3.5430861723446894, 3.6112224448897794, 3.67935871743487, 3.74749498997996, 3.81563126252505, 3.8837675350701404, 3.9519038076152304, 4.020040080160321, 4.0881763527054105, 4.156312625250501, 4.224448897795591, 4.292585170340681, 4.3607214428857715, 4.428857715430862, 4.4969939879759515, 4.565130260521042, 4.6332665330661325, 4.701402805611222, 4.7695390781563125, 4.837675350701403, 4.905811623246493, 4.973947895791583, 5.0420841683366735, 5.110220440881764, 5.1783567134268536, 5.246492985971944, 5.3146292585170345, 5.382765531062124, 5.4509018036072145, 5.519038076152305, 5.587174348697395, 5.655310621242485, 5.7234468937875755, 5.791583166332665, 5.859719438877756, 5.927855711422846, 5.995991983967936, 6.064128256513026, 6.132264529058117, 6.200400801603206, 6.268537074148297, 6.336673346693387, 6.404809619238477, 6.472945891783567, 6.541082164328658, 6.609218436873747, 6.677354709418838, 6.745490981963928, 6.813627254509018, 6.881763527054108, 6.949899799599199, 7.018036072144288, 7.086172344689379, 7.154308617234469, 7.222444889779559, 7.290581162324649, 7.35871743486974, 7.426853707414829, 7.49498997995992, 7.56312625250501, 7.6312625250501, 7.69939879759519, 7.767535070140281, 7.83567134268537, 7.903807615230461, 7.971943887775551, 8.040080160320642, 8.108216432865731, 8.176352705410821, 8.244488977955912, 8.312625250501002, 8.380761523046091, 8.448897795591183, 8.517034068136272, 8.585170340681362, 8.653306613226453, 8.721442885771543, 8.789579158316633, 8.857715430861724, 8.925851703406813, 8.993987975951903, 9.062124248496994, 9.130260521042084, 9.198396793587174, 9.266533066132265, 9.334669338677354, 9.402805611222444, 9.470941883767535, 9.539078156312625, 9.607214428857715, 9.675350701402806, 9.743486973947896, 9.811623246492985, 9.879759519038076, 9.947895791583166, 10.016032064128256, 10.084168336673347, 10.152304609218437, 10.220440881763528, 10.288577154308618, 10.356713426853707, 10.424849699398798, 10.492985971943888, 10.561122244488978, 10.629258517034069, 10.697394789579159, 10.765531062124248, 10.83366733466934, 10.901803607214429, 10.969939879759519, 11.03807615230461, 11.1062124248497, 11.17434869739479, 11.24248496993988, 11.31062124248497, 11.37875751503006, 11.446893787575151, 11.51503006012024, 11.58316633266533, 11.651302605210422, 11.719438877755511, 11.7875751503006, 11.855711422845692, 11.923847695390782, 11.991983967935871, 12.060120240480963, 12.128256513026052, 12.196392785571142, 12.264529058116233, 12.332665330661323, 12.400801603206412, 12.468937875751504, 12.537074148296593, 12.605210420841683, 12.673346693386774, 12.741482965931864, 12.809619238476953, 12.877755511022045, 12.945891783567134, 13.014028056112224, 13.082164328657315, 13.150300601202405, 13.218436873747494, 13.286573146292586, 13.354709418837675, 13.422845691382765, 13.490981963927856, 13.559118236472946, 13.627254509018035, 13.695390781563127, 13.763527054108216, 13.831663326653306, 13.899799599198397, 13.967935871743487, 14.036072144288577, 14.104208416833668, 14.172344689378757, 14.240480961923847, 14.308617234468938, 14.376753507014028, 14.444889779559118, 14.513026052104209, 14.581162324649299, 14.649298597194388, 14.71743486973948, 14.785571142284569, 14.853707414829659, 14.92184368737475, 14.98997995991984, 15.05811623246493, 15.12625250501002, 15.19438877755511, 15.2625250501002, 15.330661322645291, 15.39879759519038, 15.46693386773547, 15.535070140280562, 15.603206412825651, 15.67134268537074, 15.739478957915832, 15.807615230460922, 15.875751503006011, 15.943887775551103, 16.012024048096194, 16.080160320641284, 16.148296593186373, 16.216432865731463, 16.284569138276552, 16.352705410821642, 16.420841683366735, 16.488977955911825, 16.557114228456914, 16.625250501002004, 16.693386773547093, 16.761523046092183, 16.829659318637276, 16.897795591182366, 16.965931863727455, 17.034068136272545, 17.102204408817634, 17.170340681362724, 17.238476953907817, 17.306613226452907, 17.374749498997996, 17.442885771543086, 17.511022044088175, 17.579158316633265, 17.647294589178358, 17.715430861723448, 17.783567134268537, 17.851703406813627, 17.919839679358716, 17.987975951903806, 18.0561122244489, 18.12424849699399, 18.19238476953908, 18.260521042084168, 18.328657314629258, 18.396793587174347, 18.46492985971944, 18.53306613226453, 18.60120240480962, 18.66933867735471, 18.7374749498998, 18.805611222444888, 18.87374749498998, 18.94188376753507, 19.01002004008016, 19.07815631262525, 19.14629258517034, 19.21442885771543, 19.282565130260522, 19.350701402805612, 19.4188376753507, 19.48697394789579, 19.55511022044088, 19.62324649298597, 19.691382765531063, 19.759519038076153, 19.827655310621243, 19.895791583166332, 19.96392785571142, 20.03206412825651, 20.100200400801604, 20.168336673346694, 20.236472945891784, 20.304609218436873, 20.372745490981963, 20.440881763527056, 20.509018036072145, 20.577154308617235, 20.645290581162325, 20.713426853707414, 20.781563126252504, 20.849699398797597, 20.917835671342687, 20.985971943887776, 21.054108216432866, 21.122244488977955, 21.190380761523045, 21.258517034068138, 21.326653306613228, 21.394789579158317, 21.462925851703407, 21.531062124248496, 21.599198396793586, 21.66733466933868, 21.73547094188377, 21.803607214428858, 21.871743486973948, 21.939879759519037, 22.008016032064127, 22.07615230460922, 22.14428857715431, 22.2124248496994, 22.28056112224449, 22.34869739478958, 22.416833667334668, 22.48496993987976, 22.55310621242485, 22.62124248496994, 22.68937875751503, 22.75751503006012, 22.82565130260521, 22.893787575150302, 22.96192384769539, 23.03006012024048, 23.09819639278557, 23.16633266533066, 23.23446893787575, 23.302605210420843, 23.370741482965933, 23.438877755511022, 23.507014028056112, 23.5751503006012, 23.64328657314629, 23.711422845691384, 23.779559118236474, 23.847695390781563, 23.915831663326653, 23.983967935871743, 24.052104208416832, 24.120240480961925, 24.188376753507015, 24.256513026052104, 24.324649298597194, 24.392785571142284, 24.460921843687373, 24.529058116232466, 24.597194388777556, 24.665330661322646, 24.733466933867735, 24.801603206412825, 24.869739478957914, 24.937875751503007, 25.006012024048097, 25.074148296593187, 25.142284569138276, 25.210420841683366, 25.278557114228455, 25.34669338677355, 25.414829659318638, 25.482965931863728, 25.551102204408817, 25.619238476953907, 25.687374749498996, 25.75551102204409, 25.82364729458918, 25.89178356713427, 25.95991983967936, 26.028056112224448, 26.096192384769537, 26.16432865731463, 26.23246492985972, 26.30060120240481, 26.3687374749499, 26.43687374749499, 26.50501002004008, 26.57314629258517, 26.64128256513026, 26.70941883767535, 26.77755511022044, 26.84569138276553, 26.91382765531062, 26.981963927855713, 27.050100200400802, 27.118236472945892, 27.18637274549098, 27.25450901803607, 27.322645290581164, 27.390781563126254, 27.458917835671343, 27.527054108216433, 27.595190380761522, 27.663326653306612, 27.731462925851705, 27.799599198396795, 27.867735470941884, 27.935871743486974, 28.004008016032063, 28.072144288577153, 28.140280561122246, 28.208416833667336, 28.276553106212425, 28.344689378757515, 28.412825651302605, 28.480961923847694, 28.549098196392787, 28.617234468937877, 28.685370741482966, 28.753507014028056, 28.821643286573146, 28.889779559118235, 28.95791583166333, 29.026052104208418, 29.094188376753507, 29.162324649298597, 29.230460921843687, 29.298597194388776, 29.36673346693387, 29.43486973947896, 29.50300601202405, 29.571142284569138, 29.639278557114228, 29.707414829659317, 29.77555110220441, 29.8436873747495, 29.91182364729459, 29.97995991983968, 30.04809619238477, 30.11623246492986, 30.18436873747495, 30.25250501002004, 30.32064128256513, 30.38877755511022, 30.45691382765531, 30.5250501002004, 30.593186372745492, 30.661322645290582, 30.72945891783567, 30.79759519038076, 30.86573146292585, 30.93386773547094, 31.002004008016034, 31.070140280561123, 31.138276553106213, 31.206412825651302, 31.274549098196392, 31.34268537074148, 31.410821643286575, 31.478957915831664, 31.547094188376754, 31.615230460921843, 31.683366733466933, 31.751503006012022, 31.819639278557116, 31.887775551102205, 31.955911823647295, 32.02404809619239, 32.09218436873748, 32.16032064128257, 32.22845691382766, 32.296593186372746, 32.364729458917836, 32.432865731462925, 32.501002004008015, 32.569138276553105, 32.637274549098194, 32.705410821643284, 32.77354709418837, 32.84168336673347, 32.90981963927856, 32.97795591182365, 33.04609218436874, 33.11422845691383, 33.18236472945892, 33.25050100200401, 33.3186372745491, 33.38677354709419, 33.454909819639276, 33.523046092184366, 33.591182364729455, 33.65931863727455, 33.72745490981964, 33.79559118236473, 33.86372745490982, 33.93186372745491, 34.0])
+              .range(['#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#ffffcc', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#d9f0a3', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#addd8e', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#78c679', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#31a354', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837', '#006837']);
+    
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.x = d3.scale.linear()
+              .domain([0.0, 34.0])
+              .range([0, 400]);
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.legend = L.control({position: 'topright'});
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.legend.addTo(map_61bc564e604e49d2a45cca61f9a7fcf9);
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.xAxis = d3.svg.axis()
+        .scale(color_map_bfb343c2dd4d47ed9264ff0454a592d0.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.0, 5.666666666666667, 11.333333333333334, 17.0, 22.666666666666668, 28.333333333333336, 34.0]);
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.g = color_map_bfb343c2dd4d47ed9264ff0454a592d0.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.g.selectAll("rect")
+        .data(color_map_bfb343c2dd4d47ed9264ff0454a592d0.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_bfb343c2dd4d47ed9264ff0454a592d0.x(color_map_bfb343c2dd4d47ed9264ff0454a592d0.color.domain()[i - 1]) : color_map_bfb343c2dd4d47ed9264ff0454a592d0.x.range()[0],
+            x1: i < color_map_bfb343c2dd4d47ed9264ff0454a592d0.color.domain().length ? color_map_bfb343c2dd4d47ed9264ff0454a592d0.x(color_map_bfb343c2dd4d47ed9264ff0454a592d0.color.domain()[i]) : color_map_bfb343c2dd4d47ed9264ff0454a592d0.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 10)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_bfb343c2dd4d47ed9264ff0454a592d0.g.call(color_map_bfb343c2dd4d47ed9264ff0454a592d0.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text('Dummy Data');
+    
+            var layer_control_68b91da616484808a0a74907a4535400 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_4befff89304d4a4ca6e4f7f9860eebe4,
+                },
+                overlays :  {
+                    "choropleth" : choropleth_db251fff90c3400bb86ff1897726e8fe,
+                },
+            };
+            L.control.layers(
+                layer_control_68b91da616484808a0a74907a4535400.base_layers,
+                layer_control_68b91da616484808a0a74907a4535400.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_61bc564e604e49d2a45cca61f9a7fcf9);
         
-    
-            var icon_d12fc561329b4b2381d6568ab7a7ec6a = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_5e02bc5398df43948e3c6e6a34505263.setIcon(icon_d12fc561329b4b2381d6568ab7a7ec6a);
-        
-    
-        var popup_a2bbb98c66b44399bc4f23597cf63b27 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_8f92bc8bacc847aa82e132935deacd1f = $(`<div id="html_8f92bc8bacc847aa82e132935deacd1f" style="width: 100.0%; height: 100.0%;">Albuquerque Academy</div>`)[0];
-            popup_a2bbb98c66b44399bc4f23597cf63b27.setContent(html_8f92bc8bacc847aa82e132935deacd1f);
-        
-
-        marker_5e02bc5398df43948e3c6e6a34505263.bindPopup(popup_a2bbb98c66b44399bc4f23597cf63b27)
-        ;
-
-        
-    
-    
-            var marker_211a8f1d31174c6c91c6b6ddf8a76b16 = L.marker(
-                [35.071256, -106.632741],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_e2824b0aa9784bbb8fb051975845afa8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_211a8f1d31174c6c91c6b6ddf8a76b16.setIcon(icon_e2824b0aa9784bbb8fb051975845afa8);
-        
-    
-        var popup_69cc70ef9dd1481ea182920b543366e4 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_37385b5a147d4c0e8414c03837616cfc = $(`<div id="html_37385b5a147d4c0e8414c03837616cfc" style="width: 100.0%; height: 100.0%;">Albuquerque Institute for Mathematics and Science</div>`)[0];
-            popup_69cc70ef9dd1481ea182920b543366e4.setContent(html_37385b5a147d4c0e8414c03837616cfc);
-        
-
-        marker_211a8f1d31174c6c91c6b6ddf8a76b16.bindPopup(popup_69cc70ef9dd1481ea182920b543366e4)
-        ;
-
-        
-    
-    
-            var marker_8eb2dc5033c74e2e9843a7757dd40cb7 = L.marker(
-                [35.098487, -106.634781],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_f03660bc91c34a1fa240525e1a3bee1f = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_8eb2dc5033c74e2e9843a7757dd40cb7.setIcon(icon_f03660bc91c34a1fa240525e1a3bee1f);
-        
-    
-        var popup_90e688a64dd44310a2a0b1b1a369ceec = L.popup({"maxWidth": "100%"});
-
-        
-            var html_6ad23e02427f4ed08adfd9fa4ed9c8fa = $(`<div id="html_6ad23e02427f4ed08adfd9fa4ed9c8fa" style="width: 100.0%; height: 100.0%;">Albuquerque High School</div>`)[0];
-            popup_90e688a64dd44310a2a0b1b1a369ceec.setContent(html_6ad23e02427f4ed08adfd9fa4ed9c8fa);
-        
-
-        marker_8eb2dc5033c74e2e9843a7757dd40cb7.bindPopup(popup_90e688a64dd44310a2a0b1b1a369ceec)
-        ;
-
-        
-    
-    
-            var marker_ae9b3e401d044d42bb57b9e5e75cb179 = L.marker(
-                [35.10774, -106.700639],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_c9cfb962844242bc964781e57ca0e521 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_ae9b3e401d044d42bb57b9e5e75cb179.setIcon(icon_c9cfb962844242bc964781e57ca0e521);
-        
-    
-        var popup_f61a74528dc243aab2efd704eea32598 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_8b8a9bd5aaa748bab457b52561bd0c07 = $(`<div id="html_8b8a9bd5aaa748bab457b52561bd0c07" style="width: 100.0%; height: 100.0%;">Albuquerque Talent Development Academy</div>`)[0];
-            popup_f61a74528dc243aab2efd704eea32598.setContent(html_8b8a9bd5aaa748bab457b52561bd0c07);
-        
-
-        marker_ae9b3e401d044d42bb57b9e5e75cb179.bindPopup(popup_f61a74528dc243aab2efd704eea32598)
-        ;
-
-        
-    
-    
-            var marker_0c00a05c2d304be6b76fd51d3a555e6a = L.marker(
-                [35.083831, -106.65175],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_681e3ee9adfd4be7a94a527e783ba026 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_0c00a05c2d304be6b76fd51d3a555e6a.setIcon(icon_681e3ee9adfd4be7a94a527e783ba026);
-        
-    
-        var popup_c72a86e382654e229e717a700c8d9275 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_bd9e8598d0674018b3028d07439e5c81 = $(`<div id="html_bd9e8598d0674018b3028d07439e5c81" style="width: 100.0%; height: 100.0%;">Amy Biehl High School</div>`)[0];
-            popup_c72a86e382654e229e717a700c8d9275.setContent(html_bd9e8598d0674018b3028d07439e5c81);
-        
-
-        marker_0c00a05c2d304be6b76fd51d3a555e6a.bindPopup(popup_c72a86e382654e229e717a700c8d9275)
-        ;
-
-        
-    
-    
-            var marker_db63ea5cc39b47688335e8afdf8d9645 = L.marker(
-                [35.084248, -106.649241],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_0b2a6ad71b044a75bc6c0a134201371f = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_db63ea5cc39b47688335e8afdf8d9645.setIcon(icon_0b2a6ad71b044a75bc6c0a134201371f);
-        
-    
-        var popup_9f75c73f77574c689c4f6b9e9a62418e = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f42108e5328b40e3a58f2b0c696bc628 = $(`<div id="html_f42108e5328b40e3a58f2b0c696bc628" style="width: 100.0%; height: 100.0%;">Atrisco Heritage Academy High School</div>`)[0];
-            popup_9f75c73f77574c689c4f6b9e9a62418e.setContent(html_f42108e5328b40e3a58f2b0c696bc628);
-        
-
-        marker_db63ea5cc39b47688335e8afdf8d9645.bindPopup(popup_9f75c73f77574c689c4f6b9e9a62418e)
-        ;
-
-        
-    
-    
-            var marker_445b72ba4c6c46c795297a76558d167f = L.marker(
-                [35.159598, -106.612123],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_8de6b595dd5545ae90d220b59bc644a9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_445b72ba4c6c46c795297a76558d167f.setIcon(icon_8de6b595dd5545ae90d220b59bc644a9);
-        
-    
-        var popup_a490521ea3664de288d472353b930739 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_9f59d1d828e54a3a8ae519c4e10842e6 = $(`<div id="html_9f59d1d828e54a3a8ae519c4e10842e6" style="width: 100.0%; height: 100.0%;">Bosque School</div>`)[0];
-            popup_a490521ea3664de288d472353b930739.setContent(html_9f59d1d828e54a3a8ae519c4e10842e6);
-        
-
-        marker_445b72ba4c6c46c795297a76558d167f.bindPopup(popup_a490521ea3664de288d472353b930739)
-        ;
-
-        
-    
-    
-            var marker_ce3dcafcc04b401e8ba6e52088b94c62 = L.marker(
-                [35.205813, -106.66181],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_b7c5dd3fe73945eb9558fb0dd1fbd880 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_ce3dcafcc04b401e8ba6e52088b94c62.setIcon(icon_b7c5dd3fe73945eb9558fb0dd1fbd880);
-        
-    
-        var popup_435a9e93b3c548b2b1a592e3fb5b708f = L.popup({"maxWidth": "100%"});
-
-        
-            var html_320a121453504e81984999d43edb234f = $(`<div id="html_320a121453504e81984999d43edb234f" style="width: 100.0%; height: 100.0%;">Cibola High School</div>`)[0];
-            popup_435a9e93b3c548b2b1a592e3fb5b708f.setContent(html_320a121453504e81984999d43edb234f);
-        
-
-        marker_ce3dcafcc04b401e8ba6e52088b94c62.bindPopup(popup_435a9e93b3c548b2b1a592e3fb5b708f)
-        ;
-
-        
-    
-    
-            var marker_8a4dcaf53aa3491c91df43c21caabf26 = L.marker(
-                [35.181596, -106.583239],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_c5575ca6f14d40218918afba1fae26f3 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_8a4dcaf53aa3491c91df43c21caabf26.setIcon(icon_c5575ca6f14d40218918afba1fae26f3);
-        
-    
-        var popup_5a44ffb9e9e94996a58238c163fa5043 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f600095162964057b12e406232d1a4b1 = $(`<div id="html_f600095162964057b12e406232d1a4b1" style="width: 100.0%; height: 100.0%;">Corrales International School</div>`)[0];
-            popup_5a44ffb9e9e94996a58238c163fa5043.setContent(html_f600095162964057b12e406232d1a4b1);
-        
-
-        marker_8a4dcaf53aa3491c91df43c21caabf26.bindPopup(popup_5a44ffb9e9e94996a58238c163fa5043)
-        ;
-
-        
-    
-    
-            var marker_14e29e18692849ada2623f429a0e9c25 = L.marker(
-                [35.111135, -106.633373],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_e0e11f37be934cdd8bd7dab6878dd977 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_14e29e18692849ada2623f429a0e9c25.setIcon(icon_e0e11f37be934cdd8bd7dab6878dd977);
-        
-    
-        var popup_51cb707494cb4ce78b4bf17f6eae094e = L.popup({"maxWidth": "100%"});
-
-        
-            var html_c059f98f682b4043973b9a4019b1afb4 = $(`<div id="html_c059f98f682b4043973b9a4019b1afb4" style="width: 100.0%; height: 100.0%;">Digital Arts & Technology Academy</div>`)[0];
-            popup_51cb707494cb4ce78b4bf17f6eae094e.setContent(html_c059f98f682b4043973b9a4019b1afb4);
-        
-
-        marker_14e29e18692849ada2623f429a0e9c25.bindPopup(popup_51cb707494cb4ce78b4bf17f6eae094e)
-        ;
-
-        
-    
-    
-            var marker_336eabbd2abe42e798f72d44cfb1a41d = L.marker(
-                [35.131007, -106.583808],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_778e063d7919438a990148ef82b8fb43 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_336eabbd2abe42e798f72d44cfb1a41d.setIcon(icon_778e063d7919438a990148ef82b8fb43);
-        
-    
-        var popup_4e3245e73c7f4de88a4bfe09d8747640 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_59b1632d0ae343cbbae93bb4f73b027b = $(`<div id="html_59b1632d0ae343cbbae93bb4f73b027b" style="width: 100.0%; height: 100.0%;">Del Norte High School</div>`)[0];
-            popup_4e3245e73c7f4de88a4bfe09d8747640.setContent(html_59b1632d0ae343cbbae93bb4f73b027b);
-        
-
-        marker_336eabbd2abe42e798f72d44cfb1a41d.bindPopup(popup_4e3245e73c7f4de88a4bfe09d8747640)
-        ;
-
-        
-    
-    
-            var marker_765282bf7a064c789c4f8a636ff7b4a9 = L.marker(
-                [35.022279, -106.682024],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_1cca90036e23495daf468a67495e7f33 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_765282bf7a064c789c4f8a636ff7b4a9.setIcon(icon_1cca90036e23495daf468a67495e7f33);
-        
-    
-        var popup_87d9eefe1b7141cea0118ca39739292b = L.popup({"maxWidth": "100%"});
-
-        
-            var html_a78f3a46a6d9423eb94b4c910ab8cb79 = $(`<div id="html_a78f3a46a6d9423eb94b4c910ab8cb79" style="width: 100.0%; height: 100.0%;">El Camino Real Academy</div>`)[0];
-            popup_87d9eefe1b7141cea0118ca39739292b.setContent(html_a78f3a46a6d9423eb94b4c910ab8cb79);
-        
-
-        marker_765282bf7a064c789c4f8a636ff7b4a9.bindPopup(popup_87d9eefe1b7141cea0118ca39739292b)
-        ;
-
-        
-    
-    
-            var marker_fe08784cb8f54d6aa4d9d9be009b93ef = L.marker(
-                [35.130605, -106.513328],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_9c7e1c6968bf4c3a8d9e7039c2032693 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_fe08784cb8f54d6aa4d9d9be009b93ef.setIcon(icon_9c7e1c6968bf4c3a8d9e7039c2032693);
-        
-    
-        var popup_beca732a090b4993a7fb2dc86b0229d7 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_ed07438032c64affb7dce30f3907e1b9 = $(`<div id="html_ed07438032c64affb7dce30f3907e1b9" style="width: 100.0%; height: 100.0%;">Eldorado High School</div>`)[0];
-            popup_beca732a090b4993a7fb2dc86b0229d7.setContent(html_ed07438032c64affb7dce30f3907e1b9);
-        
-
-        marker_fe08784cb8f54d6aa4d9d9be009b93ef.bindPopup(popup_beca732a090b4993a7fb2dc86b0229d7)
-        ;
-
-        
-    
-    
-            var marker_e7830b2186a348a390ae366e7ee9a63c = L.marker(
-                [35.075663, -106.591503],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_d9d024be7cec434cafe6b6f6005bda74 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_e7830b2186a348a390ae366e7ee9a63c.setIcon(icon_d9d024be7cec434cafe6b6f6005bda74);
-        
-    
-        var popup_12e267407db048ab842f3e5d687e61dc = L.popup({"maxWidth": "100%"});
-
-        
-            var html_8d69fef04f9c4144825b198ae52443ef = $(`<div id="html_8d69fef04f9c4144825b198ae52443ef" style="width: 100.0%; height: 100.0%;">Highland High School</div>`)[0];
-            popup_12e267407db048ab842f3e5d687e61dc.setContent(html_8d69fef04f9c4144825b198ae52443ef);
-        
-
-        marker_e7830b2186a348a390ae366e7ee9a63c.bindPopup(popup_12e267407db048ab842f3e5d687e61dc)
-        ;
-
-        
-    
-    
-            var marker_613c9e8099284ab3a2cec1376c549a9a = L.marker(
-                [35.173586, -106.568889],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_f6cc16ebc5314454b0ad7ab98f3b1270 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_613c9e8099284ab3a2cec1376c549a9a.setIcon(icon_f6cc16ebc5314454b0ad7ab98f3b1270);
-        
-    
-        var popup_29b4deb543034eb6b7cf626ad0223fe7 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_82e3cf04fb994b8ab4176f0340b99c2d = $(`<div id="html_82e3cf04fb994b8ab4176f0340b99c2d" style="width: 100.0%; height: 100.0%;">Hope Christian School</div>`)[0];
-            popup_29b4deb543034eb6b7cf626ad0223fe7.setContent(html_82e3cf04fb994b8ab4176f0340b99c2d);
-        
-
-        marker_613c9e8099284ab3a2cec1376c549a9a.bindPopup(popup_29b4deb543034eb6b7cf626ad0223fe7)
-        ;
-
-        
-    
-    
-            var marker_a757da2d139d49df8cd3b99692105c60 = L.marker(
-                [35.058236, -106.704662],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_83049d9466264b659568238db89ac9de = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_a757da2d139d49df8cd3b99692105c60.setIcon(icon_83049d9466264b659568238db89ac9de);
-        
-    
-        var popup_44fd798a48514a5a9a3f2d6441ec5f3b = L.popup({"maxWidth": "100%"});
-
-        
-            var html_3df086d916e949a4a553e03231787cdb = $(`<div id="html_3df086d916e949a4a553e03231787cdb" style="width: 100.0%; height: 100.0%;">La Academia de Esperanza Charter School</div>`)[0];
-            popup_44fd798a48514a5a9a3f2d6441ec5f3b.setContent(html_3df086d916e949a4a553e03231787cdb);
-        
-
-        marker_a757da2d139d49df8cd3b99692105c60.bindPopup(popup_44fd798a48514a5a9a3f2d6441ec5f3b)
-        ;
-
-        
-    
-    
-            var marker_24e63768f10049e8ba335063308710a1 = L.marker(
-                [35.181509, -106.556488],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_5a6d1a4b68ba402f9db5ae087e02d531 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_24e63768f10049e8ba335063308710a1.setIcon(icon_5a6d1a4b68ba402f9db5ae087e02d531);
-        
-    
-        var popup_59b8714287b340b58bffdda8e5de5855 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_3b9fdfb59b4441f4bb9313835665b3fa = $(`<div id="html_3b9fdfb59b4441f4bb9313835665b3fa" style="width: 100.0%; height: 100.0%;">La Cueva High School</div>`)[0];
-            popup_59b8714287b340b58bffdda8e5de5855.setContent(html_3b9fdfb59b4441f4bb9313835665b3fa);
-        
-
-        marker_24e63768f10049e8ba335063308710a1.bindPopup(popup_59b8714287b340b58bffdda8e5de5855)
-        ;
-
-        
-    
-    
-            var marker_6dca007144ac4de1a465c9f8f803f9e8 = L.marker(
-                [35.124362, -106.64399],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_e04fee6c56eb4043a27f2a5e0e5890b1 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_6dca007144ac4de1a465c9f8f803f9e8.setIcon(icon_e04fee6c56eb4043a27f2a5e0e5890b1);
-        
-    
-        var popup_63de58d5be2b417388d617b3585798d0 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f68a067ecc8f496681428f33d10cbcf0 = $(`<div id="html_f68a067ecc8f496681428f33d10cbcf0" style="width: 100.0%; height: 100.0%;">Los Puentes High School</div>`)[0];
-            popup_63de58d5be2b417388d617b3585798d0.setContent(html_f68a067ecc8f496681428f33d10cbcf0);
-        
-
-        marker_6dca007144ac4de1a465c9f8f803f9e8.bindPopup(popup_63de58d5be2b417388d617b3585798d0)
-        ;
-
-        
-    
-    
-            var marker_9a92307ca53c45579432a5b146aa4a58 = L.marker(
-                [35.078773, -106.594713],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_d124fc1eff914d96afd4f2641cd2c8b9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_9a92307ca53c45579432a5b146aa4a58.setIcon(icon_d124fc1eff914d96afd4f2641cd2c8b9);
-        
-    
-        var popup_1dab8b41e44f4ffba62d88d5488e7ad8 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_3d5cb66aa88f4dac82c2446169a5a2cb = $(`<div id="html_3d5cb66aa88f4dac82c2446169a5a2cb" style="width: 100.0%; height: 100.0%;">Media Arts Collaborative Charter School</div>`)[0];
-            popup_1dab8b41e44f4ffba62d88d5488e7ad8.setContent(html_3d5cb66aa88f4dac82c2446169a5a2cb);
-        
-
-        marker_9a92307ca53c45579432a5b146aa4a58.bindPopup(popup_1dab8b41e44f4ffba62d88d5488e7ad8)
-        ;
-
-        
-    
-    
-            var marker_1270103863f8481a8f0a877d2af89b68 = L.marker(
-                [35.086554, -106.511085],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_1e39a201571f41feb581e05aa8a5ec47 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_1270103863f8481a8f0a877d2af89b68.setIcon(icon_1e39a201571f41feb581e05aa8a5ec47);
-        
-    
-        var popup_a224833446af429287a0bae940c3bcdc = L.popup({"maxWidth": "100%"});
-
-        
-            var html_d44d7d6e83014b30a9df8ad41033a56c = $(`<div id="html_d44d7d6e83014b30a9df8ad41033a56c" style="width: 100.0%; height: 100.0%;">Manzano High School</div>`)[0];
-            popup_a224833446af429287a0bae940c3bcdc.setContent(html_d44d7d6e83014b30a9df8ad41033a56c);
-        
-
-        marker_1270103863f8481a8f0a877d2af89b68.bindPopup(popup_a224833446af429287a0bae940c3bcdc)
-        ;
-
-        
-    
-    
-            var marker_072511f0d34144829f69d9c496f27928 = L.marker(
-                [35.109936, -106.637559],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_b239de82cf5d4785a769917f639316af = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_072511f0d34144829f69d9c496f27928.setIcon(icon_b239de82cf5d4785a769917f639316af);
-        
-    
-        var popup_d5b26fb9d55741da8284df18fd507a7b = L.popup({"maxWidth": "100%"});
-
-        
-            var html_52e7b9f2c6fb4043abd36afe102bbe93 = $(`<div id="html_52e7b9f2c6fb4043abd36afe102bbe93" style="width: 100.0%; height: 100.0%;">Menaul School</div>`)[0];
-            popup_d5b26fb9d55741da8284df18fd507a7b.setContent(html_52e7b9f2c6fb4043abd36afe102bbe93);
-        
-
-        marker_072511f0d34144829f69d9c496f27928.bindPopup(popup_d5b26fb9d55741da8284df18fd507a7b)
-        ;
-
-        
-    
-    
-            var marker_65013da7d8c04153b81feb3a659fbd43 = L.marker(
-                [35.107656, -106.655575],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_494b126d08df46d7a9eabae0805a17ff = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_65013da7d8c04153b81feb3a659fbd43.setIcon(icon_494b126d08df46d7a9eabae0805a17ff);
-        
-    
-        var popup_e05c3114dbdf45c591d377c54c641efd = L.popup({"maxWidth": "100%"});
-
-        
-            var html_4751a1f501484eb18d3f50c5cd9ef7f5 = $(`<div id="html_4751a1f501484eb18d3f50c5cd9ef7f5" style="width: 100.0%; height: 100.0%;">Native American Community Academy</div>`)[0];
-            popup_e05c3114dbdf45c591d377c54c641efd.setContent(html_4751a1f501484eb18d3f50c5cd9ef7f5);
-        
-
-        marker_65013da7d8c04153b81feb3a659fbd43.bindPopup(popup_e05c3114dbdf45c591d377c54c641efd)
-        ;
-
-        
-    
-    
-            var marker_67ed9445b8034e89a3dbaf09e17586b8 = L.marker(
-                [35.130966, -106.581195],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_c5250130f02048f0aafc2e0fff694fa8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_67ed9445b8034e89a3dbaf09e17586b8.setIcon(icon_c5250130f02048f0aafc2e0fff694fa8);
-        
-    
-        var popup_34a41504e2e64e61ac8e543b05ce4958 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_148e538d1283499abd4bf75fb8cb40f1 = $(`<div id="html_148e538d1283499abd4bf75fb8cb40f1" style="width: 100.0%; height: 100.0%;">Nex+Gen Academy</div>`)[0];
-            popup_34a41504e2e64e61ac8e543b05ce4958.setContent(html_148e538d1283499abd4bf75fb8cb40f1);
-        
-
-        marker_67ed9445b8034e89a3dbaf09e17586b8.bindPopup(popup_34a41504e2e64e61ac8e543b05ce4958)
-        ;
-
-        
-    
-    
-            var marker_b082444ba8844896af7d9ac174ac40d5 = L.marker(
-                [35.073492, -106.711025],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_6930beb4046444fda28ccce050602f48 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_b082444ba8844896af7d9ac174ac40d5.setIcon(icon_6930beb4046444fda28ccce050602f48);
-        
-    
-        var popup_e521f28a0a384a7686a63807eb7486bd = L.popup({"maxWidth": "100%"});
-
-        
-            var html_be4f349c955342ac955dacd5a5906837 = $(`<div id="html_be4f349c955342ac955dacd5a5906837" style="width: 100.0%; height: 100.0%;">Mark Armijo Academy</div>`)[0];
-            popup_e521f28a0a384a7686a63807eb7486bd.setContent(html_be4f349c955342ac955dacd5a5906837);
-        
-
-        marker_b082444ba8844896af7d9ac174ac40d5.bindPopup(popup_e521f28a0a384a7686a63807eb7486bd)
-        ;
-
-        
-    
-    
-            var marker_c02a7ec5047442b8bacd4dd4edbfa2a4 = L.marker(
-                [35.096895, -106.517802],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_3befc52748d54c328079f1918d8a3da4 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_c02a7ec5047442b8bacd4dd4edbfa2a4.setIcon(icon_3befc52748d54c328079f1918d8a3da4);
-        
-    
-        var popup_62e2ed6635a24f17a8e0e9c134b3ca39 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_9f60d439782649309234609c620c9878 = $(`<div id="html_9f60d439782649309234609c620c9878" style="width: 100.0%; height: 100.0%;">Public Academy for Performing Arts</div>`)[0];
-            popup_62e2ed6635a24f17a8e0e9c134b3ca39.setContent(html_9f60d439782649309234609c620c9878);
-        
-
-        marker_c02a7ec5047442b8bacd4dd4edbfa2a4.bindPopup(popup_62e2ed6635a24f17a8e0e9c134b3ca39)
-        ;
-
-        
-    
-    
-            var marker_0b5dc425fb354408a4db3356384c8fde = L.marker(
-                [35.050885, -106.695658],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_c6005d81c00142529a315ebe547661b4 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_0b5dc425fb354408a4db3356384c8fde.setIcon(icon_c6005d81c00142529a315ebe547661b4);
-        
-    
-        var popup_631e785b73cd41489a1d8fc23f8cd2b5 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_b5a66810e0e944ac996034d446367af5 = $(`<div id="html_b5a66810e0e944ac996034d446367af5" style="width: 100.0%; height: 100.0%;">Rio Grande High School</div>`)[0];
-            popup_631e785b73cd41489a1d8fc23f8cd2b5.setContent(html_b5a66810e0e944ac996034d446367af5);
-        
-
-        marker_0b5dc425fb354408a4db3356384c8fde.bindPopup(popup_631e785b73cd41489a1d8fc23f8cd2b5)
-        ;
-
-        
-    
-    
-            var marker_713aff077a3d44d19bdfd16f7dcb570a = L.marker(
-                [35.037934, -106.722895],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_396684de71cf44c3ae38797ab49f4513 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_713aff077a3d44d19bdfd16f7dcb570a.setIcon(icon_396684de71cf44c3ae38797ab49f4513);
-        
-    
-        var popup_6bc324236a8b4e9b9fb2dd9f75f54f9a = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f2c0f747fcdc405d87954fa76a731912 = $(`<div id="html_f2c0f747fcdc405d87954fa76a731912" style="width: 100.0%; height: 100.0%;">Robert F. Kennedy High School</div>`)[0];
-            popup_6bc324236a8b4e9b9fb2dd9f75f54f9a.setContent(html_f2c0f747fcdc405d87954fa76a731912);
-        
-
-        marker_713aff077a3d44d19bdfd16f7dcb570a.bindPopup(popup_6bc324236a8b4e9b9fb2dd9f75f54f9a)
-        ;
-
-        
-    
-    
-            var marker_d09df3ab8a1b42e495732082dae47ae9 = L.marker(
-                [35.127992, -106.700369],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_d01bd7969ee948e9b10a0849123951a9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_d09df3ab8a1b42e495732082dae47ae9.setIcon(icon_d01bd7969ee948e9b10a0849123951a9);
-        
-    
-        var popup_795acb1f40434aca90a634b836966498 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_303cac82fdba46f392124b60003b4dd2 = $(`<div id="html_303cac82fdba46f392124b60003b4dd2" style="width: 100.0%; height: 100.0%;">St. Pius X High School</div>`)[0];
-            popup_795acb1f40434aca90a634b836966498.setContent(html_303cac82fdba46f392124b60003b4dd2);
-        
-
-        marker_d09df3ab8a1b42e495732082dae47ae9.bindPopup(popup_795acb1f40434aca90a634b836966498)
-        ;
-
-        
-    
-    
-            var marker_36052a82c2a645c59d2c78b7b56d61b2 = L.marker(
-                [35.11648, -106.556657],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_2d7337917e4746f6a5cb83384c862111 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_36052a82c2a645c59d2c78b7b56d61b2.setIcon(icon_2d7337917e4746f6a5cb83384c862111);
-        
-    
-        var popup_2d2c34a26436436e8290162d184ab573 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_58cdfd8e32f54b5b99f556bee5262154 = $(`<div id="html_58cdfd8e32f54b5b99f556bee5262154" style="width: 100.0%; height: 100.0%;">Sandia High School</div>`)[0];
-            popup_2d2c34a26436436e8290162d184ab573.setContent(html_58cdfd8e32f54b5b99f556bee5262154);
-        
-
-        marker_36052a82c2a645c59d2c78b7b56d61b2.bindPopup(popup_2d2c34a26436436e8290162d184ab573)
-        ;
-
-        
-    
-    
-            var marker_fa7dec2935ef4804ae62acf0e9125bc3 = L.marker(
-                [35.150821, -106.61825],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_75cdc75a2a4b416399f76c7e7402b149 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_fa7dec2935ef4804ae62acf0e9125bc3.setIcon(icon_75cdc75a2a4b416399f76c7e7402b149);
-        
-    
-        var popup_1e967f1d9c10484ab1e799560c0af1e9 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_dc86e63ea9434cf0919fbf5182b1d0f3 = $(`<div id="html_dc86e63ea9434cf0919fbf5182b1d0f3" style="width: 100.0%; height: 100.0%;">Sandia Preparatory School</div>`)[0];
-            popup_1e967f1d9c10484ab1e799560c0af1e9.setContent(html_dc86e63ea9434cf0919fbf5182b1d0f3);
-        
-
-        marker_fa7dec2935ef4804ae62acf0e9125bc3.bindPopup(popup_1e967f1d9c10484ab1e799560c0af1e9)
-        ;
-
-        
-    
-    
-            var marker_352214e6f5824ea6b1154d0444f71b92 = L.marker(
-                [35.036221, -106.709605],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_6fd4e34a3e184b8ba470136f0ef98ba5 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_352214e6f5824ea6b1154d0444f71b92.setIcon(icon_6fd4e34a3e184b8ba470136f0ef98ba5);
-        
-    
-        var popup_41b084feed234045aa3db5c4407d3004 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_6f3ef55676f04d9493e3eb865c071f34 = $(`<div id="html_6f3ef55676f04d9493e3eb865c071f34" style="width: 100.0%; height: 100.0%;">South Valley Academy</div>`)[0];
-            popup_41b084feed234045aa3db5c4407d3004.setContent(html_6f3ef55676f04d9493e3eb865c071f34);
-        
-
-        marker_352214e6f5824ea6b1154d0444f71b92.bindPopup(popup_41b084feed234045aa3db5c4407d3004)
-        ;
-
-        
-    
-    
-            var marker_9371ca8f01a04533a400eb939564f537 = L.marker(
-                [35.055382, -106.529489],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_0f3ac863c2de4b6ca515c58ba9bd15df = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_9371ca8f01a04533a400eb939564f537.setIcon(icon_0f3ac863c2de4b6ca515c58ba9bd15df);
-        
-    
-        var popup_e7fae12f69144c02befb25d6f4db9bd9 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_73d2f353ac294d97aac5174217f35648 = $(`<div id="html_73d2f353ac294d97aac5174217f35648" style="width: 100.0%; height: 100.0%;">Technology Leadership High School</div>`)[0];
-            popup_e7fae12f69144c02befb25d6f4db9bd9.setContent(html_73d2f353ac294d97aac5174217f35648);
-        
-
-        marker_9371ca8f01a04533a400eb939564f537.bindPopup(popup_e7fae12f69144c02befb25d6f4db9bd9)
-        ;
-
-        
-    
-    
-            var marker_69c87b6ea360485eb7d733ea95a045f5 = L.marker(
-                [35.123561, -106.661458],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_e6a09082ba054716bf98b3ac8159d024 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_69c87b6ea360485eb7d733ea95a045f5.setIcon(icon_e6a09082ba054716bf98b3ac8159d024);
-        
-    
-        var popup_d006223b789d4b74a7bc34b58bc5b72a = L.popup({"maxWidth": "100%"});
-
-        
-            var html_7fcf1e6745a3468796fad8e9a60b188d = $(`<div id="html_7fcf1e6745a3468796fad8e9a60b188d" style="width: 100.0%; height: 100.0%;">Valley High School</div>`)[0];
-            popup_d006223b789d4b74a7bc34b58bc5b72a.setContent(html_7fcf1e6745a3468796fad8e9a60b188d);
-        
-
-        marker_69c87b6ea360485eb7d733ea95a045f5.bindPopup(popup_d006223b789d4b74a7bc34b58bc5b72a)
-        ;
-
-        
-    
-    
-            var marker_12780782368244b48078ebbfe4c3294d = L.marker(
-                [35.175876, -106.734264],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_bd870447bef94955ac932e181f810154 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_12780782368244b48078ebbfe4c3294d.setIcon(icon_bd870447bef94955ac932e181f810154);
-        
-    
-        var popup_0b37d0d2c2884da4ac0d217861171c16 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_3ee46adc82ae4254bb5708b28f69dba6 = $(`<div id="html_3ee46adc82ae4254bb5708b28f69dba6" style="width: 100.0%; height: 100.0%;">Volcano Vista High School</div>`)[0];
-            popup_0b37d0d2c2884da4ac0d217861171c16.setContent(html_3ee46adc82ae4254bb5708b28f69dba6);
-        
-
-        marker_12780782368244b48078ebbfe4c3294d.bindPopup(popup_0b37d0d2c2884da4ac0d217861171c16)
-        ;
-
-        
-    
-    
-            var marker_306fc2582ec44035bd648447e7bbc7f2 = L.marker(
-                [35.094382, -106.713959],
-                {}
-            ).addTo(map_6f8afc07b0f6470b8917109dfaee71ab);
-        
-    
-            var icon_eaf072fa39c9426fa04d0108f0832191 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "graduation-cap", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
-            );
-            marker_306fc2582ec44035bd648447e7bbc7f2.setIcon(icon_eaf072fa39c9426fa04d0108f0832191);
-        
-    
-        var popup_86f7444b9e8043b1a6e297d0b31af512 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_aa798dff7bea42aea1673bb60489d494 = $(`<div id="html_aa798dff7bea42aea1673bb60489d494" style="width: 100.0%; height: 100.0%;">West Mesa High School</div>`)[0];
-            popup_86f7444b9e8043b1a6e297d0b31af512.setContent(html_aa798dff7bea42aea1673bb60489d494);
-        
-
-        marker_306fc2582ec44035bd648447e7bbc7f2.bindPopup(popup_86f7444b9e8043b1a6e297d0b31af512)
-        ;
-
-        
-    
 </script>
