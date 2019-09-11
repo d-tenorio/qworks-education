@@ -12,8 +12,8 @@ took inspiration from:
 
 import pandas as pd
 import folium #https://python-visualization.github.io/folium/
-import random
 from geojson import Polygon, Feature, FeatureCollection, dump # 
+import numpy as np
 
 def importData(fname):    
     """imports a tsv, returns a pandas DataFrame"""
@@ -23,7 +23,7 @@ def importData(fname):
 def squareMaker(lat,long):
     """helper function to return a list of coordinates representing a square centered on 
         the two coordinates provided as inputs"""
-    SIZE = .002 #make the square bigger or smaller by changing this
+    SIZE = .003 #make the square bigger or smaller by changing this
     return[
            (lat+SIZE,long+SIZE),
            (lat+SIZE,long-SIZE),
@@ -32,45 +32,59 @@ def squareMaker(lat,long):
            (lat+SIZE,long+SIZE)
            ]
 
-def makeMap(df):
+def makeMap(df_coords, df_data):
     """takes in a pandas DataFrame, uses folium to produce a map of the different schools"""
-    nrows, ncols = df.shape
+    nrows, ncols = df_coords.shape
     
-    init_coord = [35.111135, -106.633373]
+    init_coord = [35.111135, -106.633373] #starting coordinates, just about in the middle
     
     m = folium.Map(
     location= init_coord,
     zoom_start=11
     )
     
-    #for now, make some dummy data to show that we can plot data when we have it
-    dummy = []
-    for x in range(35):
-        dummy.append(random.randint(1,100))
+    #get sample data
+    grad_data = []
+    names_orig = df_coords.School.unique()
+    all_schools = df_data.school.unique()
     
-    df["dummy_data"] = dummy
-    #df["dummy_data"] = range(35)
+    
+    for i,name in enumerate(names_orig):
+        if name in all_schools:
+            #sample data: All Students, 2018
+            datum = df_data.loc[(df_data['school'] == name) & (df_data['group'] == 'All Students') & (df_data['Cohort'] == 2018)]['rate']
+            grad_data.append(float(datum)) #convert, add it
+        else:
+            grad_data.append(np.NaN)
+            
+    df_coords["Data"] = grad_data
     
     features = [] #for geoJSON data
     
     #go through each school
     for r in range(nrows):
         #get the coordinates and name
-        long = round(df.loc[r]["Long"],6)
-        lat = round(df.loc[r]["Lat"],6)
-        name =  df.loc[r]["School Name"]
+        long = round(df_coords.loc[r]["Long"],6)
+        lat = round(df_coords.loc[r]["Lat"],6)
+        name =  df_coords.loc[r]["School"]
+        val = df_coords.loc[r]["Data"]
+        
+        #skip schools we have no data for
+        if np.isnan(val):
+            continue
         
         #use geoJSON to create a square centered around each school
         coords = squareMaker(lat,long) #for geoJSON, use the order lat, long
         poly = Polygon([coords])
         
-        
         features.append(Feature(geometry=poly, id= name))
+        
+        ttip = name + ': ' + str(val) + '%'
         
         #make a marker for each school using folium
         folium.Marker(
         location= [long,lat], #for folium, use the order long,lat
-        popup= name,
+        tooltip= ttip,
         icon=folium.Icon(color="green",prefix="fa",icon='graduation-cap')
         ).add_to(m)
         
@@ -85,13 +99,13 @@ def makeMap(df):
     #geo_data= 'other.json',
     geo_data= feature_collection,
     name='choropleth',
-    data=df,
-    columns=["School Name", "dummy_data"],
+    data=df_coords,
+    columns=["School", "Data"], #label, then value
     key_on='feature.id',
     fill_color='BuPu', #change the colors here - uses color brewer (http://colorbrewer2.org/) sequential palettes
     fill_opacity=0.7,
     line_opacity=0.9,
-    legend_name='Dummy Data',
+    legend_name='2018 Cohort Graduation Data by School for All Students',
     highlight=True
     ).add_to(m)
     
@@ -103,11 +117,13 @@ def makeMap(df):
     
     
 if __name__ == "__main__":
+    #coordinates for each school if interest
+    fname_coords = "name_coordinates.tsv"
+    df_coords = importData(fname_coords)
     
-    fname = "data_schools.tsv"
-    df = importData(fname)
-    
-    makeMap(df)
+    #actual grad data for every NM school
+    fname_data = "grad_data_per_school.txt"
+    df_data = importData(fname_data) 
 
-    
 
+    makeMap(df_coords,df_data)
